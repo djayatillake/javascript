@@ -41,11 +41,11 @@ export function timeToMixJuice(name) {
  * @returns {number} number of limes cut
  */
 export function limesToCut(wedgesNeeded, limes) {
-  const init = limes.length
+  const limeCount = limes.length
   while (wedgesNeeded > 0 && limes.length > 0) {
     wedgesNeeded -= slice(limes.shift())
   }
-  return init - limes.length
+  return limeCount - limes.length
 }
 
 function slice(lime) {
